@@ -1,4 +1,4 @@
-# Restaurant Item API Tests (Karate)
+# Restaurant's Take Home Menu MicroService Tests (Karate)
 
 This repository contains automated API tests for a sample Restaurant
 backend service, implemented using the Karate BDD framework in a Maven
