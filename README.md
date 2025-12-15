@@ -1,4 +1,4 @@
-# Restaurant Item API Tests (Karate)
+# Restaurant's Take Home Menu MicroService Tests (Karate)
 
 This repository contains automated API tests for a sample Restaurant
 backend service, implemented using the Karate BDD framework in a Maven
@@ -36,14 +36,20 @@ project. The tests cover core operations for retrieving item details, and adding
 
 The project is structured as follows:
 -   `src/test/java` - Contains the Karate tests
--   `src/test/resources/<FeatureName>` - Contains the Karate feature files which define the test scenarios
+-   `src/test/resources/TakeHomeAPIFeatures` - Contains the Karate feature files which define the test scenarios
 -   `src/test/resources/payload` - Contains the Karate payload files
 -   `src/test/resources/karate-config.js` - Contains the Karate configuration file
+-   `src/test/resources/utilityFeatures` - Contains the Karate utility feature files
+-   `src/main/java/utilities` - Contains the Karate utility java classes
 -   `target/karate-reports` - Contains the Karate reports
+-   `target/logs` - Contains the Karate logs
+
+------------------------------------------------------------------------
 
 ## 3. Configurations
 
 -   `pom.xml` - Maven build configuration
+-   `src/test/resources/logback-test.xml` - Logback configuration
 -   `src/test/resources/karate-config.js` - It is used to define global and environment-specific variables and configurations that can be accessed and utilized across feature files.
 -   Project is configured to have features files in either `src/test/java` or `src/test/resources` and currently the feature file is in `src/test/resources/TakeHomeAPIFeatures`.
 -   The runner file should be in `src/test/java` and named should end with "Test.java"
@@ -62,26 +68,26 @@ The project is structured as follows:
 
 ### addNewItem
 
--   Add new item and validate response
+-   Add new item and validate response, it uses utility feature to generate random IDs
 -   Add existing item and validate response
 -   Negative case: missing mandatory fields
-     - For all the POST requests, scenario outline is used and is implemented by reading the payload from a file and assigning the values from examples.
-
+     
 ------------------------------------------------------------------------
 
 ## 5. Running the tests   
 
 1.  Clone the repository: `git clone https://github.com/praveen-sai-r/karate-assessment.git`
 2.  Navigate to the project directory: `cd karate-assessment`
-3.  Build the project/Install dependencies
+3.  Build the project/Install dependencies: `mvn clean install`
 4.  Run the tests:
      - Run all tests: ```mvn clean test```
-     - Run a specific test: `mvn clean test -Dtest=<TestClassName>`
+     - Run using runner class name: `mvn clean test -Dtest=TakeHomeMenuTest`
      - Run test with specific tags: `mvn clean test -Dkarate.options="--tags @<tagName>` (getItem - for GET requests,addItem - for POST requests are custom tags defined in the feature files)
 
 Reports generated under: 
 - target/surefire-reports
 - target/karate-reports
+- target/logs
 
 ------------------------------------------------------------------------
 

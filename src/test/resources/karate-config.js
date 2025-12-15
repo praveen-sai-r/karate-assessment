@@ -1,6 +1,7 @@
 function (){
 env = karate.env; // get system property 'karate.env'
-karate.log('karate.env system property was:', env);
+//karate.log('karate.env system property was:', env);
+karate.log('\n---------------------Logs for the scenario: ', karate.info.scenarioName, '---------------------');
 
 if (!env) {
     env = 'local'; // local will be default environment
