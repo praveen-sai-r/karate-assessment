@@ -3,6 +3,7 @@ Feature: Add item with non-existent id
     * url baseUrl
     #current APIs does not have any authentication nor additional headers, if present those can be added here
 
+  @addItem
   Scenario: Add item with non-existent id
     # Using utility feature to generate random data
     * def requestbody = karate.call('classpath:utilityFeatures/RequestBodyWithRandomData.feature').requestbody
