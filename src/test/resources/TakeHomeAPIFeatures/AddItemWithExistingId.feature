@@ -13,5 +13,5 @@ Feature: Take Home API Test - Add item with existing id
     When method post
     Then status 400
     Examples:
-      | id | name     | image        | price |
-      | 10 | Hawaiian | hawaiian.png | $14   |
+      | id | name           | image         | price |
+      | 9  | Muzzarella BBQ | bbqcheese.png | $9    |

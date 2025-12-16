@@ -37,10 +37,8 @@ project. The tests cover core operations for retrieving item details, and adding
 The project is structured as follows:
 -   `src/test/java` - Contains the Karate tests
 -   `src/test/resources/TakeHomeAPIFeatures` - Contains the Karate feature files which define the test scenarios
--   `src/test/resources/payload` - Contains the Karate payload files
+-   `src/test/resources/payload` - Contains the Karate payload files(json and js files)
 -   `src/test/resources/karate-config.js` - Contains the Karate configuration file
--   `src/test/resources/utilityFeatures` - Contains the Karate utility feature files
--   `src/main/java/utilities` - Contains the Karate utility java classes
 -   `target/karate-reports` - Contains the Karate reports
 -   `target/logs` - Contains the Karate logs
 
